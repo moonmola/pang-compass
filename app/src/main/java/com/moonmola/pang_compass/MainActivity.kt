@@ -1,5 +1,6 @@
 package com.moonmola.pang_compass
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.graphics.Insets
@@ -35,11 +36,12 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private var lastNeedleAzimuth = 0f
 
     // SensorManager클래스의 인스턴스를 만듭니다.
+    @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         // 실행중 화면꺼짐 OFF
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         // 세로모드 고정
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
