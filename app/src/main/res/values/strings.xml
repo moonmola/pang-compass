@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">pang-compass</string>
+    <string name="east">동</string>
+    <string name="west">서</string>
+    <string name="south">남</string>
+    <string name="north">북</string>
+    <string name="east_angle">90</string>
+    <string name="west_angle">270</string>
+    <string name="south_angle">180</string>
+    <string name="north_angle">0</string>
 </resources>
